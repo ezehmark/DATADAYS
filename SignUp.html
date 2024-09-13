@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <llink href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"
+    name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataDays| SignUp</title>
+    
+    <style>
+        h1{color:#84de02;top:5px;margin-top:5px; display:block; text-decoration:underline black}
+        
+        .topbox{visibility:hidden;height:80px; position:fixed; display:flex;width:300px;z-index:25; border-radius:10px;background-color:#84de02;transform:translate(-50%, -50%);left:50%;top:20%;color:black; font-size:20px;color:white; text-align:center; justify-content:center; align-items:center;opacity:0; transition:opacity 2s ease} 
+        
+        .topboxshow{visibility:visible;opacity:1}
+        
+        body{height:100vh;background-color:#f0f8ff}
+        .formarea{transform:translate(-50%, -50%);paddiyng:5px 10px;position: absolute;height:600px;display:flex;bottyom:20px; justify-content:center; top:370px;left:50%;right:10px;margin-bottom:30px;width:300px;border:1px solid black; background-color:#f5e9d3; border-radius:20px}
+    .forminn{display:flex;height:60%; position:absolute;top:7%; background-color:#f5e9d3}
+    .signup{display:flex; position: absolute;top:1%; font-size:30px; font-weight:bold;z-index:30}
+    
+    input{border-radius:10px;width:270px;height:40px;border:none; background-color:#f0f8ff}
+    
+    
+    
+    #submit{background-color:red;color:white; font-weight:bold}
+    footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 6px;
+}
+    
+    @keyframes rotateouter{
+        0%{transform:rotate(0deg)}
+        100%{transform:rotate(720deg)}
+    }
+    
+    @keyframes moveouter{
+        0%{width:60%;height:60%}
+        
+        50%{width:80%;height:80%}
+        90%{width:100%;height:100%}
+        100%{width:60%;height:60%}
+    }
+    .container{transform:translate(-50%, -50%);height:25px;width:25px; display:flex;position:absolute;top:3%;z-index:23;right:1%}
+    .outer{animation: moveouter 2s ease infinite;height:60%;width:60%; background-color:#84de02;opacity: 0.8;border-radius:50%;transform:translate(-50%, -50%);top:50%;left:50%;position:absolute}
+    .inner{align-items:center; justify-content:center;height:60%;width:60%; border-radius:50%;border:0.5px solid black; display :flex;background-color:green;transform: translate(-50%, -50%);top:50%;left:50%;position:absolute; font-size:4px;color:#84de02}
+    .num{text-align}
+    .signin{font-weight:bold;display:flex;position:absolute;bottom:2px; font-size:10px;gap:5px}
+    .signin span{color:green; font-size:12px}
+    
+    </style>
+</head>
+<body>
+    <h1>DataDays</h1>
+    
+    
+    
+    
+    <div class ="topbox">Testing top box here</div>
+    <div class="formarea">
+        <div class ="signup">Sign Up</div>
+     <div class="forminn">
+        <form onsubmit ="return formvalid()" id="Signup" name ="signup">
+           <label for="firstname">First name</label><br>
+           
+            <input name ="firstname" type ="text" id="firstname" ><br><br>
+           <label for="lastname">Last name</label> <br>
+           <input name ="lastname" type ="text" id ="lastname"><br><br>
+           <label for="phone">Phone</label>
+           <br>
+           <input type="number" id ="phone" name="phone"><br><br>
+           <label for="email">Email</label>
+           <br>
+           <input type="email" id="email" name="email" value="meyou@gmail.com"><br><br>
+           <label for="password">Password</label><br>
+           <input type="password" id="password" name="password"><br><br>
+           <label for="confirm">Confirm</label><br>
+           <input type="password" id="confirm" name="password"><br><br>
+          
+           <input type="submit" value="Register" id="submit"><br></div>
+           
+        
+            <br><br><br><br>
+            
+    <p class="signin">Have an account? <a href="SignIn.html"><span>Sign in</span></a></p>       
+            
+        </form>
+       
+    
+        
+         
+          <div class="container">
+        <div class="outer">
+      </div>
+      <div class="inner">
+    </div>
+      </div>
+      
+        
+    </div>
+</body><br><br><br>
+<footer>
+    Programmed by Mark
+</footer>
+</html>
+<script>
+    
+    function showAlert(){
+        var alertBox = document.querySelector('.topbox');
+        
+        alertBox.classList.add('topboxshow');
+      
+        setTimeout(() => {
+            alertBox.classList.remove('topboxshow');
+        }, 4000);
+    }
+    
+    
+    
+    function formvalid (){
+    
+    event.preventDefault();
+        var fname = document.getElementById('firstname').value;
+        var lname = document.getElementById('lastname').value;
+   
+   var email = document.getElementById('email').value;
+   var pass1 = document.getElementById('password').value;
+   var pass2 = document.getElementById('confirm').value;
+   
+   var alertBox = document.querySelector('.topbox');
+   
+   
+   var names = `${fname} ${lname}`;
+ 
+   
+   if(fname =="" && lname ==""){
+       alertBox.textContent ='Enter your names to proceed';
+       showAlert();
+       return false;
+   }
+   
+   if(pass1 =="" || pass2 ==""){
+       alertBox.textContent = 'Put in password, please.';
+       showAlert();
+       return false;
+   }
+  
+  if(pass1 !== pass2){
+      alertBox.textContent = 'Check that passwords match';
+      showAlert();
+      return false;}
+  
+  
+  
+  else{
+      alertBox.textContent = 'Successfully registered';
+      showAlert();
+      
+     
+     setTimeout(() => {
+     window.location.href = "HomeData.html";    
+     }, 4000);
+      
+      localStorage.setItem('names', names);
+      localStorage.setItem('email', email);
+      localStorage.setItem('pass', pass1);
+      return true;}
+   
+  
+    }
+    
+</script>
