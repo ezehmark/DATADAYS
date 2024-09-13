@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <llink href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <meta charset="UTF-8"
     name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,15 @@
     
     
     <style>
+        
+        .Wa{transform:scale(0.57);height:80px;width:80px; border-radius:50%; background-image:url("https://i.imghippo.com/files/NtXiF1725730599.jpg"); background-size:cover}
+
+.X{transform:scale(0.58);height:80px;width:80px; border-radius:50%; background-image:url("https://i.imghippo.com/files/z6SXV1725832890.jpg"); background-size:cover}
+
+.In{transform:scale(.58);height:80px;width:80px; border-radius:50%; background-image:url("https://i.imghippo.com/files/vSe7S1725730417.png"); background-size:cover}
         body{background-color:white}
-        .topbox{background-color: #018bb2;filter:blur(1px);z-index:38;height:47px;width:100%;position:fixed;right:10px;left:0; display:flex;top:0}
-       h1{z-index:40;color:white;top:5px;margin-top:10px; display:block;font-family:lexend deca;font-variant:small-caps; text-decohration:1px underline #4fa83d;position:fixed;top:-4px;text-shadow:1px 1px 1px black}
+        .topbox{background-color: #018bb2;filter:blur(1px);z-index:100;height:47px;width:100%;position:fixed;right:10px;left:0; display:flex;top:0}
+       h1{z-index:120;color:white;top:5px;margin-top:10px; display:block;font-family:lexend deca;font-variant:small-caps; text-decohration:1px underline #4fa83d;position:fixed;top:-4px;text-shadow:1px 1px 1px black}
       
       
       
@@ -72,7 +79,7 @@
          .row2{display:flex;height:150px;width:100%;backgroundh-color:white; justify-content: space-between; position:relative;padding:2%;transform:translate(-50%, -50%);left:50%;top:-180px}
        .balance{font-size:20px;display:flex;position: absolute;transform:translate(-50%, -50%);left:50%;top:10%;}
        .bal{text-shadow:0px 1px 1px black;display:flex;position: absolute;transform:translate(-50%, -50%);left:50%;top:40%;color:green;font-weight:bold}
-       .service{white-space:nowrap;display:flex; position: absolute;top:538px;color:red;font-size:25px; font-weight:bold;transform: translate(-50%, -50%); left:50%;z-index:50}
+       .service{display:flex; position: absolute;top:538px;color:red;font-size:25px; font-weight:bold;transform: translate(-50%, -50%); left:50%;z-index:50}
      .logout{display:flex;position:fixed;right:5px;top:5px;font-size:17px;color:blue;z-index:100}
      a{text-decoration:none;outline:none}
      a, a * {-webkit-tap-highlight-color:transparent}
@@ -83,7 +90,14 @@
          0%{transform:scale(1)}
          100%{transform:scale(1.2)}
      }
+     .middle{height:100px;width:100%; display :flex;border-radius:25px;top:-250px;background-color:red;box-sizing:border-box;padding:5px; position:relative; box-shadow:1px 13px 5px rgba(0, 0, 0, 0.2),1px 13px 5px rgba(255, 255, 255, 0.2);justify-content:center}
+     .about{position:relative;bottom:40px;font-family:Source Code Pro; text-align:justify;color:grey}
      
+     
+     .connect{margin-top:5px;text-align:center;color:white}
+     .icons{position:absolute; justify-content: center; display:flex;height:100px;width:100%;flex-wrap:nowrap;margin-top:12px; overflow-x:auto;gap:10%}
+     
+     footer{color:red;font-size:8px;text-align:center; justify-content :center;position;relative}
      
     </style>
 </head>
@@ -172,8 +186,22 @@
     </div></div>
         
     </di>
+   
+     
+     <div class="middle"><p class="connect" >Get connected to us via the following socials</p>  <div class="icons">
+   <a href="https://wa.me/2349036202766"> <div class="Wa"></div></a>
+    <div class="X"></div>
+    <div class="In"></div>
+    </div></div>
+  
+      <p class="about">This Technology is inspired and  programmed by Mark, the Cheif Engineer at Bytance Technology. Want to know more about Mark?</p> 
     
 </body>
+<footer>
+Bytance Tech © 2024. Developed Mark E.
+</footer>
+<br>
+</div>
 
 <script>
     var welcome = document.querySelector('.welcome');
@@ -234,4 +262,4 @@
     
     
 </script>
-</html>
+        </html>
