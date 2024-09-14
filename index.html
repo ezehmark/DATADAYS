@@ -101,11 +101,22 @@
      .icons{position:absolute; justify-content: center; display:flex;height:100px;width:100%;flex-wrap:nowrap;margin-top:12px; overflow-x:auto;gap:10%}
      
      footer{color:red;font-size:8px;text-align:center; justify-content :center;position;relative}
+
+         
+     @keyframes noticecolor{
+         
+         0%{background-color:#01d434}
+         40%{background-color:#1efc20}
+         80%{background-color:blue}
+         100%{background-color:#26da8b}
+     }
+      .alertyou{animation: noticecolor 5s ease-in;padding:10px;border-radius:10px;background-color:#26da8b;top:20px;z-index:140;position:relative;color:#4a4a4a;font-weight:bold;text-align:center;visibility:hidden;position:fixed;right:10px;left:10px}
+   .showAB{visibility:visible}
      
     </style>
 </head>
 <body>
-    
+    <div class="alertyou">This telecom service platform is still under construction. Anticipate full launch soon. However, you can explore existing frameworks.</div>
     <div class="redcircle"></div>
    <a href ="SignIn.html"><div class="logout">Log out</div></a>
     <div class ="topbox"></div>
@@ -213,6 +224,23 @@ Bytance Tech © 2024. Developed Mark E.
 </div>
 
 <script>
+
+    function notice(){
+        
+    
+    
+    var alertyou = document.querySelector('.alertyou');
+    alertyou.classList.add('showAB');
+    document.addEventListener('click',
+        function(event){
+            if(!alertyou.contains(event.target)){
+                alertyou.classList.remove('showAB');
+            }
+        })
+    
+    }
+
+    
     var welcome = document.querySelector('.welcome');
     
     var names = localStorage.getItem('names');
@@ -264,6 +292,7 @@ Bytance Tech © 2024. Developed Mark E.
     window.onload = function(){
         
         count();
+        notice();
     }
     
     
