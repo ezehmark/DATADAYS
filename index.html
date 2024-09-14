@@ -23,7 +23,10 @@
       
       .top{height:230px;width:100%; display:flex;position:relative;background-image:url("https://i.imghippo.com/files/opuPD1726069370.jpg");background-size:cover;top:40px;border-radius:20px} 
       .circle1{display:flex;height:30px;width:30px;z-index:51;top:50px; position:fixed;border-radius:50%; background-image:url("https://i.imghippo.com/files/bUzUe1726003445.png"); background-size:cover} 
-      .circle2{height:100px;width:200px; border-radius:10px;background-color: white;border: 1px solid #84de02; font-size:23px; box-shadow: -1px 1px 10px black;position: absolute;display:flex; right:5px;top:15%}
+      
+      .circle2top{z-index:79;height:100px;width:200px; border-radius:10px;border: 1px solid #84de02; font-size:23px; box-shadow: -1px 1px 10px black;position: absolute;display:flex; right:5px;top:15%}
+      
+      .circle2{opacyity:0.5;z-index:75;filter:blur(8px);height:100px;width:200px; border-radius:10px;background-color: white;border: 1px solid #84de02; font-size:23px; box-shadow: -1px 1px 10px black;position: absolute;display:flex; right:5px;top:15%}
       @keyframes rotaterefresh{
           0%{transform:rotate(0deg)}
           100%{transform:rotate(720deg)}
@@ -101,32 +104,38 @@
      .icons{position:absolute; justify-content: center; display:flex;height:100px;width:100%;flex-wrap:nowrap;margin-top:12px; overflow-x:auto;gap:10%}
      
      footer{color:red;font-size:8px;text-align:center; justify-content :center;position;relative}
-
-         
+     
      @keyframes noticecolor{
          
          0%{background-color:#01d434}
          40%{background-color:#1efc20}
          80%{background-color:blue}
-         100%{background-color:#26da8b}
+         100%{background-color:#f0f0f0}
      }
-      .alertyou{animation: noticecolor 5s ease-in;padding:10px;border-radius:10px;background-color:#26da8b;top:20px;z-index:140;position:relative;color:#4a4a4a;font-weight:bold;text-align:center;visibility:hidden;position:fixed;right:10px;left:10px}
+      .alertyou{animation: noticecolor 5s ease forwards;padding:10px;border-radius:10px;background-color:#26da8b;font-size:25px;top:20px;z-index:140;position:relative;color:#4a4a4a;font-weight:bold;text-align:center;visibility:hidden;position:fixed;right:10px;left:10px}
    .showAB{visibility:visible}
      
+     .clickwa{position:absolute;height:40px;width:40px;border-radius:50%;bottom:10px; right:60px;background-image:url("https://i.imghippo.com/files/NtXiF1725730599.jpg"); background-size:cover}
     </style>
 </head>
 <body>
-    <div class="alertyou">This telecom service platform is still under construction. Anticipate full launch soon. However, you can explore existing frameworks.</div>
+    <div class="alertyou">
+        This service platform is still under construction. Anticipate full launch soon.<br> <br>Get notified:
+        <a href="https://wa.me/2349036202766">
+            <div class="clickwa"></div>
+    </a>
+    </div>
     <div class="redcircle"></div>
    <a href ="SignIn.html"><div class="logout">Log out</div></a>
     <div class ="topbox"></div>
     <h1>DATADAYS</h1>
     <div class="top"><div class="circle1"></div><p class="welcome">You're welcome to the best site for data</p>
    
-   
-    <div class ="circle2"><div class ="refresh"></div>
+   <div class="circle2top"><div class ="refresh"></div>
         <p class="balance">Balance:</p>
     <p class="bal">₦0</sup></p></div>
+  
+    <div class ="circle2"></div>
    
    
    <a href="fundwallet.html"><div class="c3cover"><div class ="circle3">
@@ -224,7 +233,6 @@ Bytance Tech © 2024. Developed Mark E.
 </div>
 
 <script>
-
     function notice(){
         
     
@@ -239,7 +247,7 @@ Bytance Tech © 2024. Developed Mark E.
         })
     
     }
-
+    
     
     var welcome = document.querySelector('.welcome');
     
@@ -250,7 +258,7 @@ Bytance Tech © 2024. Developed Mark E.
     
     
     function count(){
-        var targetNum = 5000;
+        var targetNum = 50000;
         var interval = 50;
         var num = 0;
         var duration = 10000;
