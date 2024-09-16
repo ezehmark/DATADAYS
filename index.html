@@ -27,7 +27,7 @@
            
        }
        
-        .allow{box-sizing:border-box;padding:2px;height:30px;width:120px;color:red;border-radius:10px;left:135px;background-color: #f0b4b4;position:absolute;top:50px;z-index:208;border:1px solid red; opacity:0; visibility:hidden; transition: opacity 1s ease;font-size:10px;text-align:center;animation:allowme 4s ease infinite}
+        .allow{box-sizing:border-box;padding:2px;height:30px;width:120px;color:black;border-radius:10px;left:135px;background-color: #f0b4b4;position:absolute;top:50px;z-index:208;border:1px solid red; opacity:0; visibility:hidden; transition: opacity 1s ease;font-size:10px;text-align:center;animation:allowme 4s ease infinite}
         .showallow{opacity:1; visibility:visible}
         
         @keyframes allowme{
@@ -180,7 +180,7 @@
     </style>
 </head>
 <body>
-    <div class ="allow">Allow me to rotate freely,<br>I'm a living circle.</div>
+    <div class ="allow">.</div>
     <div class ="topanim">
     <div class="Text">You're welcome</div>
     <div class="Circle"><div class="inn"></div></div>
@@ -287,7 +287,7 @@
    <a href ="https://www.linkedin.com/in/ezehmark?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><div class="In"></div></a>
     </div></div>
   
-      <p class="about">This Technology is inspired and  programmed by Mark, the Cheif Engineer at Bytance Technology. Want to know more about Mark?</p> 
+      <p class="about">This Technology is inspired and  programmed by Mark, the Cheif Engineer at Bytance Technology. <a href="https://wa.me/2349036202766">Want a project like?</a></p> 
     
 </body>
 <footer>
@@ -299,7 +299,7 @@ Bytance Tech © 2024. Developed Mark E.
 <script>
     function onloadallow(){
     var allow = document.querySelector('.allow');
-    allow.textContent = "I am a living circle. Coded by Mark";
+    allow.innerHTML = "I am a living circle.<br>I reveal strengths.";
         allow.classList.add('showallow');
         setTimeout(()=>{
             allow.classList.remove('showallow');
@@ -310,7 +310,7 @@ Bytance Tech © 2024. Developed Mark E.
     
     function showallow(){
         var allow = document.querySelector('.allow');
-        allow.textContent="Allow me to rotate freely. I am doing my job."
+        allow.textContent="You clicked me?<br><b>Use services below<b>"
         allow.classList.add('showallow');
         setTimeout(()=>{
             allow.classList.remove('showallow');
